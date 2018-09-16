@@ -10,7 +10,7 @@ class Root extends React.Component {
   componentWillMount() {
     const { match } = this.props;
     const { lang } = match.params;
-    this.i18n = i18n(lang);
+    this.i18n = i18n(lang.toLowerCase());
   }
 
   render() {

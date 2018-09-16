@@ -1,26 +1,25 @@
 import React from "react";
-import styled from "styled-components";
-import { translate } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
 
-const Container = styled.div`
-  color: blue;
-`;
+import i18n from "../config/i18n";
+import Intro from "./Intro";
 
 class Root extends React.Component {
+  i18n = null;
+
   componentWillMount() {
-    const { i18n, match } = this.props;
-    if (match.params) {
-      const { lang } = match.params;
-      if (lang) {
-        i18n.changeLanguage(lang);
-      }
-    }
+    const { match } = this.props;
+    const { lang } = match.params;
+    this.i18n = i18n(lang);
   }
 
   render() {
-    const { t } = this.props;
-    return <Container>{t("intro")}</Container>;
+    return (
+      <I18nextProvider i18n={this.i18n}>
+        <Intro />
+      </I18nextProvider>
+    );
   }
 }
 
-export default translate("root")(Root);
+export default Root;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Root from "./root/Root";
+import Root from "app/root/Root";
 
 class App extends Component {
   render() {

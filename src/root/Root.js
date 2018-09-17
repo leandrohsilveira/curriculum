@@ -13,6 +13,15 @@ class Root extends React.Component {
     this.i18n = i18n(lang.toLowerCase());
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { lang:nextLang } = nextProps.match.params;
+    const { lang:currentLang } = this.props.match.params;
+    console.log(this.i18n, currentLang, nextLang);
+    if(nextLang !== currentLang) {
+      this.i18n.changeLanguage(nextLang);
+    }
+  }
+
   render() {
     return (
       <I18nextProvider i18n={this.i18n}>
@@ -23,3 +32,4 @@ class Root extends React.Component {
 }
 
 export default Root;
+ 

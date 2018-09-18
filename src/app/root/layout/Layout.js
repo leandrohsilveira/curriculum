@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.main`
   flex: 1;
   display: flex;
 
@@ -12,7 +12,7 @@ const Container = styled.div`
   }
 `;
 
-const Paper = styled.div`
+const Paper = styled.article`
   flex: 1;
   padding: 30px;
 

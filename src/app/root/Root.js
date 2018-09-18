@@ -2,7 +2,8 @@ import React from "react";
 import { I18nextProvider } from "react-i18next";
 
 import i18n from "config/i18n";
-import Intro from "./Intro";
+import Intro from "app/root/intro/Intro";
+import Layout from "app/root/layout/Layout";
 
 class Root extends React.Component {
   i18n = null;
@@ -14,10 +15,10 @@ class Root extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { lang:nextLang } = nextProps.match.params;
-    const { lang:currentLang } = this.props.match.params;
+    const { lang: nextLang } = nextProps.match.params;
+    const { lang: currentLang } = this.props.match.params;
     console.log(this.i18n, currentLang, nextLang);
-    if(nextLang !== currentLang) {
+    if (nextLang !== currentLang) {
       this.i18n.changeLanguage(nextLang);
     }
   }
@@ -25,11 +26,12 @@ class Root extends React.Component {
   render() {
     return (
       <I18nextProvider i18n={this.i18n}>
-        <Intro />
+        <Layout>
+          <Intro />
+        </Layout>
       </I18nextProvider>
     );
   }
 }
 
 export default Root;
- 

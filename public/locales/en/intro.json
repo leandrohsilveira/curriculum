@@ -1,3 +1,9 @@
 {
-  "avatar": "Avatar"
+  "avatar": "Avatar",
+  "name": "Silveira, Leandro Hinckel",
+  "nationality": "Brazilian",
+  "age": "{{years}} years old",
+  "reside": "Brazil",
+  "email": "leandro.hinckel@gmail.com",
+  "phone": "+55 (048) 99911-3190"
 }

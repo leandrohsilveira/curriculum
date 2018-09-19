@@ -1,3 +1,9 @@
 {
-  "avatar": "Foto"
+  "avatar": "Foto",
+  "name": "Leandro Hinckel Silveira",
+  "nationality": "Brasileiro",
+  "age": "{{years}} anos",
+  "reside": "Florianópolis/SC",
+  "email": "leandro.hinckel@gmail.com",
+  "phone": "(048) 99911-3190"
 }

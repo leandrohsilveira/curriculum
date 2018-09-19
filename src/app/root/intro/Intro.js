@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { translate } from "react-i18next";
 
-import Badge, { BadgeLink } from "components/Badge";
+import Badge from "components/Badge";
 
 const url = "https://avatars0.githubusercontent.com/u/8015037?s=200&v=4";
 
@@ -64,13 +64,15 @@ const Intro = ({ t }) => {
       <Data>
         <Name>{t("name")}</Name>
         <Info>
-          <Badge>{t("nationality")}</Badge>
-          <Badge>{t("age", { years: 27 })}</Badge>
-          <Badge>{t("reside")}</Badge>
+          <Badge icon="language">{t("nationality")}</Badge>
+          <Badge icon="face">{t("age", { years: 27 })}</Badge>
+          <Badge icon="home">{t("reside")}</Badge>
         </Info>
         <Contact>
-          <BadgeLink href={`mailto:${t("email")}`}>{t("email")}</BadgeLink>
-          <Badge>{t("phone")}</Badge>
+          <Badge href={`mailto:${t("email")}`} icon="email">
+            {t("email")}
+          </Badge>
+          <Badge icon="phone">{t("phone")}</Badge>
         </Contact>
       </Data>
     </Container>

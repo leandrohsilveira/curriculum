@@ -7,8 +7,13 @@ const Container = styled.main`
 
   justify-content: center;
   padding: 30px;
+
   > * {
     max-width: 1280px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 12px;
   }
 `;
 

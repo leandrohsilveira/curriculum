@@ -1,2 +1,1 @@
 import "roboto-fontface/css/roboto/roboto-fontface.css";
-import "material-icons/iconfont/material-icons.css";

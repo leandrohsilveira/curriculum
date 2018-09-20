@@ -7,7 +7,7 @@ const Container = styled.span`
   font-style: normal;
   display: flex;
   align-items: center;
-  background-color: #ccc;
+  border: 1px solid #333;
   border-radius: 25px;
   padding: 8px;
   margin: 5px;

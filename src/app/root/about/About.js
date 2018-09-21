@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { translate } from "react-i18next";
 
 const Container = styled.div`
-  margin-top: 24px;
+  margin: 24px;
 `;
 
 const Paragraph = styled.p``;

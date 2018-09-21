@@ -26,12 +26,18 @@ const Container = styled.header`
 const Avatar = styled.img`
   border-radius: 50%;
   margin: 15px;
+  @media print {
+    display: none;
+  }
 `;
 
 const Data = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media print {
+    margin: 10px 15px;
+  }
   @media screen and (max-width: ${width}px) {
     text-align: center;
   }
@@ -39,7 +45,7 @@ const Data = styled.div`
 
 const Name = styled.h1`
   font-size: 1.7em;
-  margin: 0;
+  margin: 15px 5px;
   @media screen and (max-width: ${width}px) {
     font-size: 1.4em;
   }

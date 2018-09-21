@@ -17,10 +17,6 @@ const Container = styled.div`
   }
 `;
 
-const Item = styled.div`
-  margin: 0 5px;
-`;
-
 const ImageIcon = styled.img`
   height: 24px;
   width: 24px;
@@ -33,19 +29,13 @@ class Topbar extends React.Component {
   render() {
     return (
       <Container>
-        <Item>
-          <Button icon={Print} onClick={this.handlePrintClick} />
-        </Item>
-        <Item>
-          <Button
-            value="pt-br"
-            icon={BrazilIcon}
-            onClick={this.handleFlagClick}
-          />
-        </Item>
-        <Item>
-          <Button value="en" icon={EuaIcon} onClick={this.handleFlagClick} />
-        </Item>
+        <Button icon={Print} onClick={this.handlePrintClick} />
+        <Button
+          value="pt-br"
+          icon={BrazilIcon}
+          onClick={this.handleFlagClick}
+        />
+        <Button value="en" icon={EuaIcon} onClick={this.handleFlagClick} />
       </Container>
     );
   }

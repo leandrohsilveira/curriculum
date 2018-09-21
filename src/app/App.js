@@ -7,8 +7,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
+          <Route path="/" component={Root} />
           <Route path="/:lang" component={Root} />
-          <Redirect to="/pt-br" />
+          <Redirect to="/" />
         </Switch>
       </BrowserRouter>
     );

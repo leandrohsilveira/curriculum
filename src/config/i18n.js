@@ -3,15 +3,24 @@ import XHR from "i18next-xhr-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { reactI18nextModule } from "react-i18next";
 
-const configure = lng => {
+const configure = () => {
   return i18n
     .use(XHR)
     .use(LanguageDetector)
     .use(reactI18nextModule) // if not using I18nextProvider
     .init({
-      lng,
+      detection: {
+        order: [
+          "querystring",
+          "path",
+          "cookie",
+          "localStorage",
+          "navigator",
+          "htmlTag",
+          "subdomain"
+        ]
+      },
       lowerCaseLng: true,
-      fallbackLng: "pt-br",
       debug: true,
 
       // react i18next special options (optional)

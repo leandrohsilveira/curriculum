@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { translate } from "react-i18next";
 
+import Language from "icons/Language";
+import Face from "icons/Face";
+import Home from "icons/Home";
+import Email from "icons/Email";
+import Phone from "icons/Phone";
+
 import Badge from "components/Badge";
 
 const url = "https://avatars0.githubusercontent.com/u/8015037?s=200&v=4";
@@ -64,15 +70,15 @@ const Intro = ({ t }) => {
       <Data>
         <Name>{t("name")}</Name>
         <Info>
-          <Badge icon="language">{t("nationality")}</Badge>
-          <Badge icon="face">{t("age", { years: 27 })}</Badge>
-          <Badge icon="home">{t("reside")}</Badge>
+          <Badge icon={Language}>{t("nationality")}</Badge>
+          <Badge icon={Face}>{t("age", { years: 27 })}</Badge>
+          <Badge icon={Home}>{t("reside")}</Badge>
         </Info>
         <Contact>
-          <Badge href={`mailto:${t("email")}`} icon="email">
+          <Badge icon={Email} href={`mailto:${t("email")}`}>
             {t("email")}
           </Badge>
-          <Badge icon="phone">{t("phone")}</Badge>
+          <Badge icon={Phone}>{t("phone")}</Badge>
         </Contact>
       </Data>
     </Container>

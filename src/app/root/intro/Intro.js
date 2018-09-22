@@ -27,6 +27,14 @@ const Container = styled.header`
 const Avatar = styled.img`
   border-radius: 50%;
   margin: 15px;
+
+  transition:
+    border-radius 500ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  &:hover {
+    border-radius: 0%;
+  }
+
   @media print {
     display: none;
   }

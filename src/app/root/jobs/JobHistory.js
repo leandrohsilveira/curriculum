@@ -28,11 +28,15 @@ const JobHistory = ({ t, i18n }) => {
         <JobEntry
           started={parseDate("06/04/2012")}
           ended={parseDate("21/08/2012")}
-          description="CPM Braxis Capgemini"
+          company="CPM Braxis Capgemini"
+          jobRole="Estagiário"
+          description="Codificar e evidenciar testes para aceitação das demandas, atuando na fábrica de software em um processo de com programação na linguagem COBOL LE para o setor financeiro."
         />
         <JobEntry
           started={parseDate("10/09/2012")}
-          description="BRy Tecnologia S.A."
+          company="BRy Tecnologia S.A."
+          jobRole="Programador Sênior"
+          description="Discutir, estimar, codificar e testar novas demandas, prestando suporte nível dois em um processo de desenvolvimento dinâmico e suscetível a mudanças. Atuando no desenvolvimento de serviços na nuvem e fábrica de software na área de certificação e assinatura digital, trabalhando principalmente no front-end com Angular 6, Angular JS e auxiliando no back-end com JEE 6 e Spring Framework."
         />
       </JobHistoryContainer>
     );

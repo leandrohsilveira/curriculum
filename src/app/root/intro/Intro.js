@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { translate } from "react-i18next";
 
+import { isResourceLoaded } from "utils/translate";
 import Language from "icons/Language";
 import Face from "icons/Face";
 import Home from "icons/Home";
@@ -69,26 +70,31 @@ const Contact = styled.address`
   }
 `;
 
-const Intro = ({ t }) => {
-  return (
-    <Container>
-      <Avatar src={url} alt={t("avatar")} />
-      <Data>
-        <Name>{t("name")}</Name>
-        <Info>
-          <Badge icon={Language}>{t("nationality")}</Badge>
-          <Badge icon={Face}>{t("age", { years: 27 })}</Badge>
-          <Badge icon={Home}>{t("reside")}</Badge>
-        </Info>
-        <Contact>
-          <Badge icon={Email} href={`mailto:${t("email")}`}>
-            {t("email")}
-          </Badge>
-          <Badge icon={Phone}>{t("phone")}</Badge>
-        </Contact>
-      </Data>
-    </Container>
-  );
+const i18nResources = ["intro"];
+
+const Intro = ({ t, i18n }) => {
+  if (isResourceLoaded(i18n, i18nResources)) {
+    return (
+      <Container>
+        <Avatar src={url} alt={t("avatar")} />
+        <Data>
+          <Name>{t("name")}</Name>
+          <Info>
+            <Badge icon={Language}>{t("nationality")}</Badge>
+            <Badge icon={Face}>{t("age", { years: 27 })}</Badge>
+            <Badge icon={Home}>{t("reside")}</Badge>
+          </Info>
+          <Contact>
+            <Badge icon={Email} href={`mailto:${t("email")}`}>
+              {t("email")}
+            </Badge>
+            <Badge icon={Phone}>{t("phone")}</Badge>
+          </Contact>
+        </Data>
+      </Container>
+    );
+  }
+  return null;
 };
 
-export default translate(["intro"])(Intro);
+export default translate(i18nResources)(Intro);

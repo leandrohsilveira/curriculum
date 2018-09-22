@@ -45,6 +45,7 @@ class Topbar extends React.Component {
   };
 
   handleFlagClick = event => {
+    event.preventDefault();
     const { history } = this.props;
     const { value } = event.currentTarget;
     history.push(`/${value}`);

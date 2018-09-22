@@ -20,8 +20,6 @@ const Link = styled.a`
 
 const BadgeIcon = styled(Icon)`
   margin-right: 5px;
-  height: 24px;
-  width: 24px;
 `;
 
 const BadgeContent = styled.span``;

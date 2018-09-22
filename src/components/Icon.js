@@ -1,9 +1,17 @@
 import React from "react";
+import styled, { css } from "styled-components";
 
-const Icon = ({ icon: IconElement, className }) => (
-  <span className={className}>
+const IconWrapper = styled.span`
+  ${({ size = 24 }) => css`
+    height: ${size}px;
+    width: ${size}px;
+  `}
+`;
+
+const Icon = ({ icon: IconElement, size, className }) => (
+  <IconWrapper className={className} size={size}>
     <IconElement />
-  </span>
+  </IconWrapper>
 );
 
 export default Icon;

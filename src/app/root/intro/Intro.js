@@ -9,17 +9,17 @@ import Home from "icons/Home";
 import Email from "icons/Email";
 import Phone from "icons/Phone";
 
+import media from "config/media";
+
 import Badge from "components/Badge";
 
 const url = "https://avatars0.githubusercontent.com/u/8015037?s=200&v=4";
-
-const width = 660;
 
 const Container = styled.header`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: ${width}px) {
+  ${media.query.maxSm} {
     flex-direction: column;
   }
 `;
@@ -44,10 +44,10 @@ const Data = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  @media print {
+  ${media.query.print} {
     margin: 10px 15px;
   }
-  @media screen and (max-width: ${width}px) {
+  ${media.query.maxSm} {
     text-align: center;
   }
 `;
@@ -55,7 +55,7 @@ const Data = styled.div`
 const Name = styled.h1`
   font-size: 1.7em;
   margin: 15px 5px;
-  @media screen and (max-width: ${width}px) {
+  ${media.query.maxSm} {
     font-size: 1.4em;
   }
 `;
@@ -64,7 +64,7 @@ const Info = styled.p`
   display: flex;
   margin: 0;
   flex-wrap: wrap;
-  @media screen and (max-width: ${width}px) {
+  ${media.query.maxSm} {
     justify-content: center;
   }
 `;
@@ -73,7 +73,7 @@ const Contact = styled.address`
   display: flex;
   margin: 0;
   flex-wrap: wrap;
-  @media screen and (max-width: ${width}px) {
+  ${media.query.maxSm} {
     justify-content: center;
   }
 `;

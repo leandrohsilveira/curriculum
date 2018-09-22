@@ -7,6 +7,7 @@ import Topbar from "app/root/topbar/Topbar";
 import Intro from "app/root/intro/Intro";
 import About from "app/root/about/About";
 import Layout from "app/root/layout/Layout";
+import JobHistory from "app/root/jobs/JobHistory";
 
 class Root extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Root extends React.Component {
           <Route component={Topbar} />
           <Intro />
           <About />
+          <JobHistory />
         </Layout>
       </I18nextProvider>
     );

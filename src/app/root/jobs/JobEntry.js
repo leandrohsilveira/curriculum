@@ -4,6 +4,7 @@ import moment from "moment";
 import { translate } from "react-i18next";
 
 import { isResourceLoaded } from "utils/translate";
+import media from "config/media";
 import EventDate from "components/EventDate";
 
 const JobEntryContainer = styled.div`
@@ -29,10 +30,18 @@ const JobData = styled.div`
 `;
 
 const JobCompanyName = styled.h3`
+  font-size: 1.3em;
   margin: 5px 0;
+  ${media.query.maxSm} {
+    font-size: 1.1em;
+  }
 `;
 const JobRole = styled.h4`
+  font-size: 1.1em;
   margin: 5px 0;
+  ${media.query.maxSm} {
+    font-size: 1em;
+  }
 `;
 const JobDescription = styled.p`
   margin: 5px 0;

@@ -1,4 +1,17 @@
 {
   "today": "Today",
-  "dateFormat": "MM/DD/YYYY"
+  "dateFormat": "MM/DD/YYYY",
+  "professionalBackground": "Professional background",
+  "jobHistory": {
+    "cpmBraxis": {
+      "company": "CPM Braxis Campgemini",
+      "role": "Intern developer",
+      "description": "Code and evidence acceptance tests, working in the software factory with COBOL LE language for the financial sector."
+    },
+    "bryTecnologia": {
+      "company": "BRy Tecnologia S.A.",
+      "role": "Senior web developer",
+      "description": "Discuss, estimate, code and test new demands, providing level two support in a dynamic development process and susceptible to change. Works in the development of cloud services and software factory in the area of certification and digital signature. It mainly works on the front end with Angular 6, Angular JS and assists in the back end with JEE 6 and Spring Framework."
+    }
+  }
 }

@@ -1,4 +1,17 @@
 {
   "today": "Hoje",
-  "dateFormat": "DD/MM/YYYY"
+  "dateFormat": "DD/MM/YYYY",
+  "professionalBackground": "Experiencia profissional",
+  "jobHistory": {
+    "cpmBraxis": {
+      "company": "CPM Braxis Campgemini",
+      "role": "Programador estagiário",
+      "description": "Codificar e evidenciar testes de aceitação, atuando na fábrica de software com a linguagem COBOL LE para o setor financeiro."
+    },
+    "bryTecnologia": {
+      "company": "BRy Tecnologia S.A.",
+      "role": "Programador web senior",
+      "description": "Discutir, estimar, codificar e testar novas demandas, prestando suporte nível dois em um processo de desenvolvimento dinâmico e suscetível a mudanças. Atua no desenvolvimento de serviços na nuvem e fábrica de software na área de certificação e assinatura digital. Trabalha principalmente no front-end com Angular 6, Angular JS e auxilia no back-end com JEE 6 e Spring Framework."
+    }
+  }
 }
